@@ -25,7 +25,7 @@ public class KafkaTransactionListener {
     }
 
     // Topic from application.yml → general.kafka-topic
-    @KafkaListener(topics = "${general.kafka-topic}")
+    @KafkaListener(topics = "${general.kafka-topic}" , groupId = "midas-core")
     public void onMessage(@Payload Transaction tx) {
         boolean recorded = transactionService.process(tx);
         log.info("Processed tx senderId={} recipientId={} amount={} -> {}",
