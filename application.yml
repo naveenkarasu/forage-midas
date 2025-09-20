@@ -1,0 +1,9 @@
+general:
+  # Kafka topic used by the listener and tests.
+  # You can override via env var GENERAL_KAFKA_TOPIC if needed.
+  kafka-topic: ${GENERAL_KAFKA_TOPIC:midas-task-topic}
+incentive:
+  url: http://localhost:8080/incentive
+server:
+  port: 33400
+

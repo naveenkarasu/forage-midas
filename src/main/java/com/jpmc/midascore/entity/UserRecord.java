@@ -2,6 +2,7 @@ package com.jpmc.midascore.entity;
 
 import jakarta.persistence.*;
 
+
 @Entity
 public class UserRecord {
 
